@@ -75,9 +75,10 @@ app.get("/customers/city/:name",function(req,res) {
 
   app.post("/customers",function(req,res) {
     let body = req.body;
-    console.log(body);
-    let maxid = custData.reduce((acc,curr) => (curr.id >= acc ? curr.id : acc),0)
-    let newid = maxid + "AZY" +1;
+    //console.log(body);
+    let maxid = Math.floor(Math.random() * 90 + 10)
+    console.log(maxid);
+    let newid = "AZY" + maxid ;
     let newCustomer = {id:newid, ...body};
     custData.push(newCustomer);
     res.send(newCustomer);

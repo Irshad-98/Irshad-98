@@ -28,4 +28,4 @@ let carMaster = [
     {id: "BTR31", price: 184000, year: 2011, kms: 120833, model: "Etios VXi", color: "Silver Grey"}
    ];
 
-module.exports.carData = { carMaster , cars };
+module.exports = { carMaster,cars };
